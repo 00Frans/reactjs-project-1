@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --primary-white: #ffff !important;
+  --secondary-black: #00000049 !important;
+  --light-coral: #dd7373 !important;
+  --anti-flash-white: #efefef !important;
+  --cornflower-blue: #5f9df7 !important;
+  --cobait-blue: #1746a2 !important;
+  --penn-blue: #181d50 !important;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 8vmin;
   pointer-events: none;
 }
 
@@ -36,3 +49,26 @@
     transform: rotate(360deg);
   }
 }
+
+/**Custom CSS**/
+.primary-white {
+  color: var(--primary-white);
+}
+.secondary-black {
+  color: var(--secondary-black);
+}
+.light-coral {
+  color: var(--light-coral);
+}
+.anti-flash-white {
+  color: var(--anti-flash-white);
+}
+.penn-blue {
+  background-color: var(--penn-blue);
+}
+
+.test-white {
+  background-color: #00000049;
+}
+
+/**Loading**/
