@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <MDBNavbar expand="lg" dark className="penn-blue">
-        <MDBContainer fluid>
+        <MDBContainer>
           <MDBNavbarBrand href="#">
             <span className="text-danger">Nav</span>Bar
           </MDBNavbarBrand>

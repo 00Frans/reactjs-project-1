@@ -72,3 +72,11 @@
 }
 
 /**Loading**/
+.overlay {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    1
+  ); /* Adjust opacity by changing the last value (0.5 in this case) */
+}

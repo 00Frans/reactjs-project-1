@@ -8,6 +8,7 @@ const Container = ({ children }) => {
     <>
       <Navbar />
       <MDBContainer>{children}</MDBContainer>
+      <Footer />
     </>
   );
 };
