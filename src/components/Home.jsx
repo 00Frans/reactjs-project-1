@@ -4,67 +4,79 @@ import Container from "./Container";
 import {
   MDBCol,
   MDBRow,
-  MDBCardOverlay,
-  MDBCardImage,
-  MDBCard,
+  MDBBadge,
+  MDBTypography,
+  MDBCardText,
+  MDBBtn,
+  MDBContainer,
 } from "mdb-react-ui-kit";
 import wheels from "../images/wheels.png";
 import Carousel from "./Carousel";
+import Bg2 from "../images/windows.jpg";
 import Bg1 from "../images/bg1.jpg";
+import Bg3 from "../images/bg3.jpg";
+import Logo2 from "../images/windows-logo.png";
+import Bg4 from "../images/csbt.jpg";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 const Home = () => {
   return (
-    <Container>
-      <MDBCard background="dark" className="text-white">
-        <div className="h-50">
-          <MDBCardImage
-            overlay
-            src={Bg1}
-            className="w-100  overlay"
-            alt="..."
-            style={{ width: "100%", height: "50%" }}
-          />
-        </div>
-        <MDBCardOverlay>
-          <div className="clearfix mt-5">
-            <MDBRow className="justify-content-center align-items-center text-start">
-              <MDBCol md={8}>
-                <p>
-                  Donec ullamcorper nulla non metus auctor fringilla. Nulla
-                  vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac
-                  cursus commodo, tortor mauris paddenstoel nibh, ut fermentum
-                  massa justo sit amet risus. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit.
-                </p>
-                <p>
-                  Sed posuere consectetur est at lobortis. Etiam porta sem
-                  malesuada magna mollis euismod. Duis mollis, est non commodo
-                  luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                  elit. Id nullam tellus relem amet commodo telemque olemit. Sed
-                  posuere consectetur est at lobortis. Maecenas sed diam eget
-                  risus varius blandit sit amet non magna. Cras justo odio,
-                  dapibus ac facilisis in, egestas eget quam.
-                </p>
-                <p>
-                  Donec id elit non mi porta gravida at eget metus. Aenean eu
-                  leo quam. Pellentesque ornare sem lantaarnpaal quam venenatis
-                  vestibulum. Donec sed odio dui. Maecenas faucibus mollis
-                  interdum. Nullam quis risus eget urna salsa tequila vel eu
-                  leo. Donec id elit non mi porta gravida at eget metus.
-                </p>
+    <>
+      <div
+        className="px-5 text-center bg-image"
+        style={{
+          backgroundImage: `url(${Bg3})`,
+          height: "100vh",
+        }}
+      >
+        <div
+          className="mask"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.64)" }}
+        >
+          <Navbar />
+
+          <MDBContainer>
+            <MDBRow className="d-flex justify-content-center align-items-center min-vh-100 text-white">
+              <MDBCol md={6} className="text-start">
+                <div>
+                  <MDBTypography
+                    tag="div"
+                    className="display-1 pb-3 mb-4 border-bottom fw-bold"
+                  >
+                    Microsoft Windows
+                    <MDBBadge className="position-absolute translate-middle m-4 pe-1 fs-1 bg-transparent ">
+                      <span className="light-red ">xp</span>
+                    </MDBBadge>
+                  </MDBTypography>
+                  <MDBTypography variant="h1" className="mb-3">
+                    Experience the Power of Windows!
+                  </MDBTypography>
+                  <MDBCardText className="fw-bold text-muted fs-5">
+                    <span className="gray">
+                      "Revolutionize your digital experience with Microsoft
+                      Windows, the leading operating system trusted by millions
+                      worldwide. Seamlessly navigate through tasks, unleash
+                      creativity, and stay connected like never before with the
+                      innovative features and robust performance of Windows."
+                    </span>
+                  </MDBCardText>
+                  <MDBBtn tag="a" outline size="lg">
+                    Try now
+                  </MDBBtn>
+                </div>
               </MDBCol>
-              <MDBCol md={4}>
-                <img
-                  src={wheels}
-                  alt="logo ..."
-                  className="App-logo bd-placeholder-img col-md-6 float-md-end mb-3 ms-md-3 w-75 h-75"
-                ></img>
+              <MDBCol md={6}>
+                <img src={Logo2} alt="Image..." className="w-50" />
               </MDBCol>
             </MDBRow>
-          </div>
-        </MDBCardOverlay>
-      </MDBCard>
-      <Carousel />
-    </Container>
+          </MDBContainer>
+        </div>
+      </div>
+      <div>
+        <Carousel />
+      </div>
+      <Footer />
+    </>
   );
 };
 

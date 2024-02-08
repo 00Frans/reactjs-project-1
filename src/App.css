@@ -16,7 +16,7 @@
 }
 
 .App-logo {
-  height: 8vmin;
+  height: 300px;
   pointer-events: none;
 }
 
@@ -63,10 +63,15 @@
 .anti-flash-white {
   color: var(--anti-flash-white);
 }
+.gray {
+  color: #bfbfbf;
+}
 .penn-blue {
   background-color: var(--penn-blue);
 }
-
+.light-red {
+  color: #eb212e;
+}
 .test-white {
   background-color: #00000049;
 }
@@ -79,4 +84,9 @@
     0,
     1
   ); /* Adjust opacity by changing the last value (0.5 in this case) */
+}
+.background1 {
+  background-size: cover;
+  opacity: 0.25;
+  max-width: 1130px;
 }
